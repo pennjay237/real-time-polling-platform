@@ -1,0 +1,82 @@
+/* src/pages/ParticipantJoin/ParticipantJoin.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 24px;
+}
+
+.card {
+  background-color: var(--card-background);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.logoTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--sub-text-color);
+  margin-bottom: 24px;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.divider {
+  position: relative;
+  margin: 20px 0;
+  color: var(--sub-text-color);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.dividerText {
+  background-color: var(--card-background);
+  padding: 0 10px;
+}
+
+.message {
+  color: #ef4444;
+  margin-top: 16px;
+  font-size: 0.875rem;
+}

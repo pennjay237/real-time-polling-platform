@@ -1,0 +1,395 @@
+/* src/pages/HostDashboard/HostDashboard.module.css */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.sidebar {
+  width: 256px;
+  background-color: var(--card-background);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+.sidebarHeader {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-color);
+}
+
+.logoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logoSubtitle {
+  font-size: 0.75rem;
+  color: var(--sub-text-color);
+}
+
+.sidebarToggleBtn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    transform: translateX(-100%);
+  }
+  .sidebarToggleBtn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--sub-text-color);
+  }
+}
+
+.navigation,
+.quickActionsNav {
+  padding: 16px;
+}
+
+.navHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--sub-text-color);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--sub-text-color);
+}
+
+.navItem:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.navItemActive {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.profileSection {
+  padding: 24px;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profileAvatar {
+  width: 40px;
+  height: 40px;
+  background-color: #d8b4fe;
+  color: #581c87;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.profileName {
+  font-weight: 600;
+}
+
+.profileEmail {
+  font-size: 0.75rem;
+  color: var(--sub-text-color);
+}
+
+.signOut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--sub-text-color);
+  transition: color 0.2s ease;
+}
+
+.signOut:hover {
+  color: var(--text-color);
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--sub-text-color);
+}
+
+@media (max-width: 768px) {
+  .mobileMenuBtn {
+    display: block;
+    margin-right: 16px;
+  }
+  .headerLeft {
+    display: none;
+  }
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contentBody {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.welcomeSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.welcomeTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.welcomeSubtitle {
+  font-size: 1rem;
+  color: var(--sub-text-color);
+  margin-top: 4px;
+}
+
+.welcomeBtn {
+  padding: 12px 24px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboardCard {
+  background-color: var(--card-background);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sub-text-color);
+}
+
+.cardIcon {
+  color: var(--sub-text-color);
+}
+
+.cardValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.cardStatus {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #10b981;
+  margin-top: 8px;
+}
+
+.statusDot {
+  color: #10b981;
+  animation: pulse 1.5s infinite;
+  margin-right: 4px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.sessionsPanel {
+  background-color: var(--card-background);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panelTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.viewAll {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0;
+  color: var(--sub-text-color);
+}
+
+.emptyIcon {
+  color: #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.emptySubtitle {
+  font-size: 0.875rem;
+  max-width: 320px;
+}
+
+.emptyBtn {
+  margin-top: 24px;
+}
+
+.sessionList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sessionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.sessionName {
+  font-weight: 600;
+}
+
+.sessionStats {
+  font-size: 0.875rem;
+  color: var(--sub-text-color);
+}
+
+.sessionActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sessionStatus {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.live {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.closed {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.viewBtn {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
