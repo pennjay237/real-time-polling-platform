@@ -1,0 +1,13 @@
+.container {
+  padding: 2rem;
+}
+.newPoll {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.pollList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

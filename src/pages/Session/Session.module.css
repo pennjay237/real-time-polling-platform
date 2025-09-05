@@ -1,0 +1,13 @@
+.container {
+  padding: 2rem;
+}
+.pollList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.poll button {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
