@@ -1,21 +1,21 @@
-// src/pages/Login/Login.jsx
+// src/pages/SignUp/SignUp.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 import Button from '../../components/Button/Button.jsx';
 import Input from '../../components/Input/Input.jsx';
-import styles from './Login.module.css';
+import styles from './SignUp.module.css';
 
-const Login = ({ onLogin }) => {
+const SignUp = ({ onSignUp }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
-    console.log('Login attempt:', { name, email, password });
-    onLogin();
+    console.log('Sign Up attempt:', { name, email, password });
+    onSignUp();
     navigate('/dashboard');
   };
 
@@ -27,8 +27,8 @@ const Login = ({ onLogin }) => {
           <h1 className={styles.logoTitle}>PollStream5</h1>
         </div>
         <p className={styles.subtitle}>Real-time polling platform</p>
-        <h2 className={styles.formTitle}>Host Login</h2>
-        <form onSubmit={handleLogin}>
+        <h2 className={styles.formTitle}>Host Sign Up</h2>
+        <form onSubmit={handleSignUp}>
           <Input
             label="Name"
             type="text"
@@ -44,7 +44,7 @@ const Login = ({ onLogin }) => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="host@example.com"
+            placeholder="yourname@example.com"
             required
           />
           <Input
@@ -53,13 +53,13 @@ const Login = ({ onLogin }) => {
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
+            placeholder="Create a password"
             required
           />
-          <Button type="submit" fullWidth>Log In</Button>
+          <Button type="submit" fullWidth>Sign Up</Button>
         </form>
         <div className={styles.authLinkContainer}>
-          <p>Don't have an account? <a href="#" onClick={() => navigate('/signup')} className={styles.authLink}>Sign Up</a></p>
+          <p>Already have an account? <a href="#" onClick={() => navigate('/login')} className={styles.authLink}>Log In</a></p>
         </div>
         <div className={styles.divider}>
           <span className={styles.dividerText}>or</span>
@@ -72,4 +72,4 @@ const Login = ({ onLogin }) => {
   );
 };
 
-export default Login;
+export default SignUp;

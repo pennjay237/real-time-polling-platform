@@ -93,8 +93,8 @@ const HostDashboard = ({ onLogout }) => {
           <div className={styles.profileInfo}>
             <div className={styles.profileAvatar}>P</div>
             <div>
-              <div className={styles.profileName}>Penn Jude</div>
-              <div className={styles.profileEmail}>pennjude31@gmail.com</div>
+              <div className={styles.profileName}>user</div>
+              <div className={styles.profileEmail}>user@gmail.com</div>
             </div>
           </div>
           <div onClick={onLogout} className={styles.signOut}>
